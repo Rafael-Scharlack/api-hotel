@@ -1,0 +1,14 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-hotel
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: api_hotel
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_hotel_data:/var/lib/mysql
+
+volumes:
+  mysql_hotel_data:
